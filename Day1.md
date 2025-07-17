@@ -1,19 +1,21 @@
 # **Introduction to QFN-48 Package, chip, pads, core, die and IPs**
 
 * Arduino’s main chip/processor \- Block Diagram
+![chunk-0-img-0](https://github.com/user-attachments/assets/4c262ec8-562f-41db-b078-6642b194c72d)
 
 * Integrated circuit(IC)(Arudiono) / Package   
   The name of the chip:  **QFN \- 48 package (Quad Flat No-Leads).**
-
-![][image1]  
+![chunk-0-img-1](https://github.com/user-attachments/assets/dcebeea5-2622-4dfd-a11d-7fc9a4404dcf)
+  
 7mmx7mm  
 This picture shows how the chip is connected to the package via wire bonds.
 
 * **Pads**: This is where signals go inside and outside of the chip.  
 * **Core:** The place where the digital logic sits like the AND,NOR,XNOR,Etc gates.  
 * **Die:** Is basically the piece where it contains a proper constructed IC inside**. (the outer)**
+![chunk-0-img-2](https://github.com/user-attachments/assets/6d63f1a4-c5ea-41ae-aaf8-5f766a0836bb)
 
-  **Foundry-** A big factory containing machines that manufacture chips (deposition systems).
+ **Foundry-** A big factory containing machines that manufacture chips (deposition systems).
 
   Foundry IPs are pre designed, silicon  hardware blocks (like PLLs or SRAM) provided by chip factories to save design time, while macros are pre-built digital logic blocks (like SPI controllers) for common functions that can be customized before integration. Both are plug and play components for chip designers, but IPs are physical/analog with fixed layouts, whereas macros are digital and often configurable
 
@@ -23,7 +25,7 @@ This picture shows how the chip is connected to the package via wire bonds.
 **Basic process:** Risc V Assembled language program is then converted into machine learning programs (binary 0s and 1s) and then finally these bits get executed to the hardware layout.
 
 The image down below is the schematic of the process:   
-![][image2]
+![chunk-0-img-3](https://github.com/user-attachments/assets/5427c9af-7136-4de8-8299-23fa3571deaa)
 
 # **From Software Applications to Hardware**
 
@@ -34,6 +36,7 @@ The image down below is the schematic of the process:
 - **The assembler** basically converts the instructions into binary for the hardware.
 
   The simplified process is shown below:
+![chunk-0-img-4](https://github.com/user-attachments/assets/38d40fa1-1658-4532-8fab-393e6c4f0110)
 
 #  **SoC design and OpenLANE**
 
@@ -50,8 +53,7 @@ Basically a collection of multiple files used to model the fabrication process.(
 **\-RTL IPs**\- These are already predesigned, reusable hardware blocks and these blocks essentially use complex logic to describe the functioning of the circuit.  
 \-**EDA Tools-** Used for design, analysing and simulating circuit designs. Examples are Qflow, open road, etc.
 
-![][image3]  
-   
+![chunk-0-img-5](https://github.com/user-attachments/assets/06e0ed41-2a77-43f3-b5e5-4a0de36ee24a)
 
 **130nm processor example:**
 
@@ -60,19 +62,17 @@ Basically a collection of multiple files used to model the fabrication process.(
 **Asic Flow objective** : RTL to GDSII  
 **Simplified RTL2GDS flow**  
 Simplified schematic:
-
-![][image4]
+![chunk-0-img-6](https://github.com/user-attachments/assets/8e0d6780-ad25-4962-8558-161c990f1595)
 
 **Synthesis**: Converts RTL to a circuit out of components from the standard cell library(SCL)
 
-![][image5]  
+![chunk-0-img-7](https://github.com/user-attachments/assets/12b3f019-637f-4268-ac8e-6053ad868146)
+
 Each standard cells have regular layout
 
 **Chip floor planning**: Partition the chip die between different system building blocks and placing their IO pads.
 
 - **Macro-Floor planning**: Dimensions, pin locations, rows, etc.
-
-**(Just noticed that I don't have to document videos and I spent too much time doing this lol)**
 
 # **Eda Tools**
 
