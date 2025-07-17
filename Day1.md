@@ -1,4 +1,6 @@
-# **Introduction to QFN-48 Package, chip, pads, core, die and IPs**
+#Day 1: Inception of OpenSource EDA, OpenLANE and SKY130 PDK#
+
+ **Introduction to QFN-48 Package, chip, pads, core, die and IPs**
 
 * Arduino’s main chip/processor \- Block Diagram
 ![chunk-0-img-0](https://github.com/user-attachments/assets/4c262ec8-562f-41db-b078-6642b194c72d)
