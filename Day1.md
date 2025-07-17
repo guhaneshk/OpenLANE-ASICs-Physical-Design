@@ -82,12 +82,13 @@ Each standard cells have regular layout
 
 - Getting into the **openlane working directory** on linux:
 
-#  
-
-#  
+# <img width="1192" height="685" alt="image8" src="https://github.com/user-attachments/assets/b26f64a2-55fa-4dc1-be79-4212e0048703" />
+ 
 
 - Exploring **the sky130A directory** which is a part of the Openlane Working directory(As seen below)  
 - Also **commands for navigation** include, cd, ls, ls \-al, ls \-ltr, cd –, cat, etc.
+  <img width="1351" height="863" alt="image37" src="https://github.com/user-attachments/assets/7663a63d-7e5e-4d3d-a1e4-a5fc99d75b0f" />
+
 
 We mainly use **ls \-ltr for listing the content** in the directory and also **cd ../ is really helpful for going back to a directory.**
 
