@@ -91,17 +91,21 @@ Each standard cells have regular layout
 
 
 We mainly use **ls \-ltr for listing the content** in the directory and also **cd ../ is really helpful for going back to a directory.**
+<img width="732" height="392" alt="image40" src="https://github.com/user-attachments/assets/09681b28-deed-4439-a158-ccf4ff881de4" />
 
 - Exploring the **libs.ref** directory which contains all the tech stuff in it, as seen below:
 
 - **libs.tech is specific to the tool** whereas **libs.ref is specific to the technology.**
 
 - As seen below, this is the content of the **libs.tech** directory:
-
-![][image6]
+<img width="1176" height="632" alt="image22" src="https://github.com/user-attachments/assets/6d1f7c15-fb35-4c2a-baa4-373e822e0324" />
 
 - Exploring the **sky130\_fd\_sc\_hd** file which contains all the technological files like lef, techlef, etc.  
+<img width="885" height="605" alt="image27" src="https://github.com/user-attachments/assets/fa13ac5d-cb8b-4b1e-8504-2b2b0de03965" />
+
 - Exploring the lib file under sky130\_fd\_sc\_hd directory
+<img width="1307" height="784" alt="image18" src="https://github.com/user-attachments/assets/d09c8fdc-e215-4fb3-9254-0350f134e5c6" />
+
 
 - As you can see above, I cd’ed into the file and ls \-ltr’ed it to show me the content in chronological order.
 
