@@ -106,58 +106,62 @@ We mainly use **ls \-ltr for listing the content** in the directory and also **c
 - Exploring the lib file under sky130\_fd\_sc\_hd directory
 <img width="1307" height="784" alt="image18" src="https://github.com/user-attachments/assets/d09c8fdc-e215-4fb3-9254-0350f134e5c6" />
 
-
 - As you can see above, I cd’ed into the file and ls \-ltr’ed it to show me the content in chronological order.
 
 Working on my own- exploring the techlef file (As seen below):  
-![][image7]
+<img width="1121" height="306" alt="image4" src="https://github.com/user-attachments/assets/33291967-a33e-4da0-8ef4-10acec63c5c8" />
 
 # 
 
 # **Design preparation:** 
 
 - Going into the **Openlane directory** after clearing and going back usign cd – command.
-
-![][image8]
+<img width="1251" height="457" alt="image6" src="https://github.com/user-attachments/assets/b78f64dd-780c-40de-8228-033cb3f66681" />
 
 - We use docker to actually get in to openlane, as shown below:
-
-  ![][image9]
+    <img width="1005" height="438" alt="image14" src="https://github.com/user-attachments/assets/c351d424-e99c-4069-b485-f3ea4fd14979" />
 
 Getting into openlane tcl:
-
-![][image10]
+<img width="1174" height="278" alt="image16" src="https://github.com/user-attachments/assets/2d9d5cf5-c1f8-4038-b90a-6576b260ce9f" />
 
 Openlane 0.9 implementation:   
-![][image11]
+<img width="1118" height="371" alt="image29" src="https://github.com/user-attachments/assets/5533535d-19b1-48d2-b06f-15eda40eca7b" />
 
 Anything that runs on openlane is extracted from the designs folder.
 
 - Opening a new terminal window to explore the design file in the openlane dir, as show below:
-
-![][image12]
+   <img width="1302" height="747" alt="image32" src="https://github.com/user-attachments/assets/9535dfec-1be9-4855-aaf1-7323c736705a" />
 
 - After this, I explored the **picorv32a dir** in the design dir, as shown below:
+<img width="1137" height="255" alt="image2" src="https://github.com/user-attachments/assets/8ec6f1d4-faae-4190-a4d7-b6ba07687a70" />
 
 Checking out the content in the **config.tcl** file:
+<img width="1287" height="707" alt="image9" src="https://github.com/user-attachments/assets/4515a8c7-65f9-4003-88be-a7564b8c98f4" />
 
-\-  
-![][image13]
+-
+<img width="1084" height="236" alt="image24" src="https://github.com/user-attachments/assets/255d3569-79ac-4c6a-be79-0320463e9286" />
+
 
 Content inside the **sky130A\_sky130\_fd\_sc\_hd\_config.tcl file** by using the **“less”** command:
+<img width="728" height="232" alt="image17" src="https://github.com/user-attachments/assets/74367d3c-2675-473f-9cfd-224f53879bf2" />
 
 Preparing design in openlane(first step) as seen below:
+<img width="1199" height="657" alt="image1" src="https://github.com/user-attachments/assets/9e7034eb-7653-4baf-84a3-f828e3670abd" />
 
 \-As we can see, A **new file was created**,named **“runs**” after we ran preparation in openlane:
+<img width="1143" height="520" alt="image35" src="https://github.com/user-attachments/assets/35e22a88-3325-4413-a813-e48c03c43420" />
 
 # **Review files after design prep and run synthesis**
 
 - Folder structures required by OpenLANE, (It automatically shows current date as well), As seen below:
+<img width="1045" height="567" alt="image13" src="https://github.com/user-attachments/assets/d27891b1-d8fb-48c2-b82b-6e083a61a044" />
 
   This is the content in the date file:
+<img width="1311" height="372" alt="image3" src="https://github.com/user-attachments/assets/eacc64d0-fbd7-453a-a7c7-23917f880a3a" />
 
 \-**merged .lef folder**, This was created when we ran OpenLANE  
 Seen below:
+<img width="1358" height="852" alt="image31" src="https://github.com/user-attachments/assets/b43f8921-930c-4fe4-9a2e-6b99237c297d" />
 
 In this directory, we could also see various other things like **synthesis, placement, floorplan,etc**  
 ![][image14]  
