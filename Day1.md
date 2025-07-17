@@ -164,24 +164,33 @@ Seen below:
 <img width="1358" height="852" alt="image31" src="https://github.com/user-attachments/assets/b43f8921-930c-4fe4-9a2e-6b99237c297d" />
 
 In this directory, we could also see various other things like **synthesis, placement, floorplan,etc**  
-![][image14]  
+<img width="1507" height="488" alt="image15" src="https://github.com/user-attachments/assets/a0d811c2-ee8a-4bb7-8cbc-c6e8a2373aa8" />
+
 This is the content inside the **merged\_unpadded.lef file in the synthesis dir**
+<img width="1563" height="795" alt="image36" src="https://github.com/user-attachments/assets/e250cead-a956-4f7c-8190-07c88f5c85cb" />
 
 \- Inside the **logs dir**:
+<img width="1112" height="481" alt="image7" src="https://github.com/user-attachments/assets/be8895ed-8506-46cc-9e51-5e3406a998a8" />
 
 - **Parameter**/Content inside the **config.tcl** file:
+<img width="1845" height="823" alt="image30" src="https://github.com/user-attachments/assets/9633e678-cace-470e-af0f-d8059ab3e569" />
 
 - Content/Data inside the **cmds.log** (command file), as shown below:
+<img width="1841" height="338" alt="image39" src="https://github.com/user-attachments/assets/749053d5-5750-4398-8a4f-91bde6e7974e" />
 
 # **OpenLANE Project Git Link Description**
 
 Github link: [https://github.com/efabless/openlane](https://github.com/efabless/openlane)
+<img width="1892" height="860" alt="image11" src="https://github.com/user-attachments/assets/d7dd02f2-726b-4134-8ec5-75327b76122b" />
 
 \- **Synthesis** : Success 
+<img width="1833" height="826" alt="image20" src="https://github.com/user-attachments/assets/e44f7b33-4701-4f3b-adf3-54460825f88a" />
 
 - **OpenLANE Flow**:
+<img width="800" height="502" alt="image10" src="https://github.com/user-attachments/assets/f3cede69-a6b9-4162-8b3e-2c616f3307ac" />
 
 Must follow this in order to run commands ,  not following this will result in break the subsequent commands, as seen below:
+<img width="542" height="292" alt="image21" src="https://github.com/user-attachments/assets/f90ce29c-bf23-4056-b34e-5ae95c26d1b0" />
 
 # **Steps to characterize synthesis results**
 
@@ -191,14 +200,16 @@ Must follow this in order to run commands ,  not following this will result in b
 **Ratio : 10.84%**
 
 - Checking our runs folder after running synthesis
+<img width="1376" height="572" alt="image5" src="https://github.com/user-attachments/assets/0cdb0ec9-ee98-4b28-b886-2e46383948e2" />
 
-![][image15]
 
 As we can see a new file, **picorv32a.synthesis.v** has been created in the results dir of the synthesis due to the synthesis 
 
 - Reports of the synthesis in chronological order, as shown below:
+<img width="1365" height="285" alt="image12" src="https://github.com/user-attachments/assets/1b48e3e1-ae8f-409f-aa94-1a1c0bdb0c6c" />
 
 - Contents of the **1-yosys\_4.stat.rpt** report
+<img width="450" height="813" alt="image25" src="https://github.com/user-attachments/assets/a442960a-011c-46b9-abea-d233c52f841b" />
 
 —---------------------------------------**END OF DAY 1**\--------------------------------------------------
 
