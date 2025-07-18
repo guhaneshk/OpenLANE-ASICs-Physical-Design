@@ -2,3 +2,6 @@
 
 ## Chip Floor Planning Considerations
 ### Utilization factor and aspect ratio
+
+Net list- A netlist basically defines the connectivty between all the components; example below:
+<img width="1004" height="587" alt="image" src="https://github.com/user-attachments/assets/f6f2326a-e47a-479a-a269-988a0cdf1867" />
