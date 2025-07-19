@@ -8,3 +8,5 @@
 
 * When defining the deminions of the chip, we are mosltly dependent on the **logic gates.**
 * Utilization Factor: **(Area Occupied by Netlist)/(Total Area of the Core)**
+
+* Aspect Ratio : Height/ Width
