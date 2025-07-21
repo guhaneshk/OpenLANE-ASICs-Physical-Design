@@ -60,6 +60,12 @@ This is what happens:
 
 ### Pin placement and logical cell placement blockage
 
+* **Complete design:**
+<img width="705" height="573" alt="image" src="https://github.com/user-attachments/assets/08470e68-dae7-4abf-8c94-13d395d350ab" />
 
+* The connectivity information between the gates is verilog and is called as the **"Netlist"**.
+
+**Pin placement and logical cell placement blockage:**
+<img width="967" height="566" alt="image" src="https://github.com/user-attachments/assets/0b8f2b04-c4c8-4252-b1c6-5bb2c2c6df05" />
 
 
