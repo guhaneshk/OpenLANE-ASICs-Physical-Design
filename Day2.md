@@ -212,3 +212,6 @@ Charactarization software named **GUNA**
 <img width="1035" height="520" alt="image" src="https://github.com/user-attachments/assets/ce2207da-1813-4c03-8060-45b60b059912" />
 
 
+—---------------------------------------**END OF DAY 2**\--------------------------------------------------
+
+
