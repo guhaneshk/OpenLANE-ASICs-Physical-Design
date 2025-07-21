@@ -1,1 +1,1 @@
-# SKY130 Day 2: Good vs Bad Floorplan and Introduction to Library Cells
+# SKY130 DAY 3: Design Library Cell Using Magic Layout and ngspice characterisation
