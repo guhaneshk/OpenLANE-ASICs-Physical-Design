@@ -1,4 +1,4 @@
-# SKY130 Day 1: Inception of OpenSource EDA, OpenLANE and SKY130 PDK
+# VSDIAT SKY130 Day 1: Inception of OpenSource EDA, OpenLANE and SKY130 PDK
 
 ## **Introduction to QFN-48 Package, chip, pads, core, die and IPs**
 
