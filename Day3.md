@@ -74,4 +74,8 @@ As we can see, It should look like this:
 
 <img width="1831" height="669" alt="image" src="https://github.com/user-attachments/assets/993cc342-9ff9-49c9-87b0-b184e79ef036" />
 
+2) Creating active region for transistors
+
+* We begin by creating specific areas on the chip where the transistors will go. To make sure these areas stay isolated from each other, we first grow a 40nm layer of silicon dioxide, followed by an 80nm layer of silicon nitride. Then, we coat the surface with a light-sensitive material called photoresist. A mask is placed on top to protect the regions where the transistors will be. When UV light is applied, it removes the unprotected parts of the photoresist. After that, we remove the mask and leftover photoresist. The chip is then placed in a furnace so that oxide grows in the exposed areas, creating isolation. Finally, we use hot phosphoric acid to remove the silicon nitride, leaving only the silicon dioxide and the base silicon layer.
+
 
