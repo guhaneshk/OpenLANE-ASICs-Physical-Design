@@ -78,4 +78,63 @@ As we can see, It should look like this:
 
 * We begin by creating specific areas on the chip where the transistors will go. To make sure these areas stay isolated from each other, we first grow a 40nm layer of silicon dioxide, followed by an 80nm layer of silicon nitride. Then, we coat the surface with a light-sensitive material called photoresist. A mask is placed on top to protect the regions where the transistors will be. When UV light is applied, it removes the unprotected parts of the photoresist. After that, we remove the mask and leftover photoresist. The chip is then placed in a furnace so that oxide grows in the exposed areas, creating isolation. Finally, we use hot phosphoric acid to remove the silicon nitride, leaving only the silicon dioxide and the base silicon layer.
 
+<img width="1602" height="665" alt="image" src="https://github.com/user-attachments/assets/395fa83e-d069-4df5-b950-baf60048d558" />
+
+<img width="1304" height="594" alt="image" src="https://github.com/user-attachments/assets/d99096e8-b9e1-443b-ac51-d826ac22a65e" />
+
+### Formation of N-well and P-well
+
+* Mask 2 protects the N Well area while the P-Well is formed, and Mask 3 does the reverse. UV light removes the exposed photoresist, leaving only the protected areas
+* The wafer is then placed in a furnace, where boron is diffused to create the P-Well and phosphorus for the N Well. This forms the separate regions for NMOS and PMOS transistors on the same chip. (also known as twintub process)
+
+<img width="1439" height="689" alt="image" src="https://github.com/user-attachments/assets/4a12d58e-ba03-4fc2-bab0-fff7fa973286" />
+
+### Formation of gate terminal
+
+* The gate is essentially where you control your **threshhold voltage** (Turning on of our transistors)
+
+The image below includes the formula for the same as well:
+
+<img width="1414" height="682" alt="image" src="https://github.com/user-attachments/assets/dacbff2b-e0c2-4767-8336-a1cdc8cde466" />
+
+* First a photoresist layer is applied to the wafer to mark the regions that need protection and then it is followed by mask 4. UV light is then used to remove the exposed photoresist, then low energy boron is implanted into the P-Well using Mask 4 to adjust the threshold voltage. Likewise, phosphorus or arsenic is implanted into the N-Well with Mask 5. The oxide layer which was damaged during implantation, is removed using hydrofluoric acid and replaced with a high quality silicon dioxide layer. A polysilicon film is added next and Mask 6 is used to define and etch the gate terminal using photolithography.
+
+<img width="1339" height="624" alt="image" src="https://github.com/user-attachments/assets/3de630ce-c83d-42ef-b67c-e27b4d925849" />
+
+### Lightly doped drain (LDD) formation
+
+* Lightly Doped Drain are added to prevent two big issues as devices shrink which are the hot electron effect (where high energy electrons damage Si–Si bonds or leak into oxide layers) and the short channel effect (where the drain’s electric field interferes with gate control). To form LDDs, light doping (N⁻ for NMOS, P⁻ for PMOS) is done using Masks 7 and 8. Then, oxide spacers are added via anisotropic etching to protect these regions before heavier doping (N⁺/P⁺) forms the actual source and drain.
+
+<img width="1291" height="630" alt="image" src="https://github.com/user-attachments/assets/cc65d2dd-627d-4b8a-85b8-be0500387e2c" />
+
+### Source – drain formation
+
+* To make the source and drain regions in a CMOS chip, we first add a super thin oxide layer to stop the dopants from sinking too deep (this is called preventing channeling). Then we use Mask 9 to implant N+ (using arsenic) into the P well and Mask 10 to implant P+ (using boron) into the N well. Little sidewall spacers help keep the earlier dopings safe. In the end, we increase the heat in the furnace so everything settles properly into place
+
+<img width="1354" height="622" alt="image" src="https://github.com/user-attachments/assets/c309727f-5fb3-4703-baca-b8cbda2711e3" />
+
+### Local interconnect formation
+
+* We first clear off the thin oxide layer to open up the gate, source, and drain. Then, we coat the surface with titanium which reacts under heat to form materials that help electricity flow better TiSi2 for low resistance and TiN for short connections. After that, we use Mask 11 and a special cleaning process, RCA to get rid of any extra titanium.
+
+<img width="1464" height="677" alt="image" src="https://github.com/user-attachments/assets/d58d834f-dc4f-4bca-b6d7-4786dfc180ee" />
+
+### Higher level metal formation
+
+* So the earlier TiN layer was kinda bumpy, which isn’t good, so to fix that, we add a layer of doped silicon dioxide which helps with temperature and blocking sodium. Then they smooth everything out using CMP, basically sanding it flat and After that, they drill tiny holes with photolithography (Mask 12), add a thin TiN layer, fill it with tungsten and polish it again.
+* Then after that we add the metal layers, rhey add aluminum (Mask 13), clean off extra, repeat the process with new holes (Mask 14), and add another aluminum layer (Mask 15). Finally, they finsish it with silicon nitride and use Mask 16 to open the final points.
+
+<img width="1174" height="682" alt="image" src="https://github.com/user-attachments/assets/357470b8-5141-4990-a1f8-c17206fd54d1" />
+
+### Lab introduction to Sky130 basic layers layout and LEF using inverter
+
+<img width="1614" height="781" alt="image" src="https://github.com/user-attachments/assets/6436398c-e62b-49ee-965d-60b7adba3102" />
+
+* As you can see above, we can choose layers from the color pallete in the right side.
+
+* For selecting a particular part and to check its connectivity, we press S- Three times.
+
+<img width="1742" height="924" alt="image" src="https://github.com/user-attachments/assets/d0962f80-966f-4c4b-badc-892421cbe83c" />
+
+
 
