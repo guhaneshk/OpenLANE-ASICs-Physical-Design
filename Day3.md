@@ -162,3 +162,23 @@ The image below includes the formula for the same as well:
 
 <img width="1123" height="516" alt="image" src="https://github.com/user-attachments/assets/bc65e182-09b0-4279-87dc-10f841ae66ec" />
 
+<img width="1058" height="540" alt="image" src="https://github.com/user-attachments/assets/fc02b495-cea9-4949-b371-df82ae98873a" />
+
+<img width="1390" height="769" alt="image" src="https://github.com/user-attachments/assets/5e775acd-4b52-4e55-b537-e2dea21679cd" />
+
+### Lab steps to characterize inverter using sky130 model files
+
+* We can type in ngspice sky130A_inv.spice, to load the spice file in NGSPICE:
+
+<img width="1357" height="698" alt="image" src="https://github.com/user-attachments/assets/6603149e-7ba9-4699-b3ea-5f8dc9b63f4f" />
+
+<img width="1900" height="1044" alt="image" src="https://github.com/user-attachments/assets/4b31ca23-8a01-4cb5-b9e5-6b930c5e4ec3" />
+* We changed C3 because its value was too low and it caused spikes in the graph>
+
+### Lab introduction to Magic tool options and DRC rules
+
+<img width="1171" height="779" alt="image" src="https://github.com/user-attachments/assets/1551cb5c-0aa6-4687-b0dc-c5750ef08f3a" />
+
+
+
+
