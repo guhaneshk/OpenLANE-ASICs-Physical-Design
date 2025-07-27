@@ -197,3 +197,47 @@ Fot downloading the lab files, we use the command: *wget http://opencircuitdesig
 
 ### Lab introduction to Magic and steps to load Sky130 tech-rules
 
+* Opened net3.meg file in magic:
+<img width="1767" height="939" alt="image" src="https://github.com/user-attachments/assets/09a9679b-f50d-4734-ad22-c2c6b235e363" />
+
+<img width="519" height="512" alt="image" src="https://github.com/user-attachments/assets/7ba8b9e2-bb69-48de-9928-22263fbdfc12" />
+* We can tyoe box in the b box to view dimensions.
+
+### Lab Excercise to Fix poly.9 error in SKY130 Tech-File
+
+Loaded poly.mag:
+
+<img width="1919" height="1020" alt="image" src="https://github.com/user-attachments/assets/17fa6444-d731-49db-aa4c-d343901782cd" />
+
+<img width="1567" height="894" alt="image" src="https://github.com/user-attachments/assets/5d6e0d68-0c1a-44e1-9508-a634ff22ed4b" />
+
+### Lab exercise to implement poly resistor spacing to diff and tap
+
+<img width="480" height="273" alt="image" src="https://github.com/user-attachments/assets/23d6907d-d858-429b-8dda-d1c42cfa4fcc" />
+
+### Lab challenge exercise to describe DRC error as geometrical construct
+* We can use the cifmaxwidth rule to to define the max width of the leftover to be zero.
+
+<img width="753" height="131" alt="image" src="https://github.com/user-attachments/assets/dc08b280-883a-424b-9741-f81d0b30462b" />
+
+*For example, We load the nwell.mag file on magic to check out the violations:
+
+<img width="1909" height="988" alt="image" src="https://github.com/user-attachments/assets/245b2b12-eb0a-42fd-b67c-a964842d3e0f" />
+
+<img width="922" height="606" alt="image" src="https://github.com/user-attachments/assets/4db60057-c07e-4219-a010-cfd18183369e" />
+
+### Lab challenge to find missing or incorrect rules and fix them
+
+<img width="709" height="88" alt="image" src="https://github.com/user-attachments/assets/7faa5707-a959-4797-a90c-6fc45f2b2945" />
+
+<img width="890" height="687" alt="image" src="https://github.com/user-attachments/assets/24e2edfd-95c8-430e-af45-454b5d3b06c8" />
+
+basically the untapped returns any nwell without nsc, as seen above in the style drc.
+
+In the end, it should look like this after resolving all the violations:
+
+<img width="223" height="179" alt="image" src="https://github.com/user-attachments/assets/d09f7d80-a963-4436-915a-791d104d5dbe" />
+
+—---------------------------------------**END OF DAY 3**\--------------------------------------------------
+
+
