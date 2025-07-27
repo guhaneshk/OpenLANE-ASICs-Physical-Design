@@ -136,5 +136,29 @@ The image below includes the formula for the same as well:
 
 <img width="1742" height="924" alt="image" src="https://github.com/user-attachments/assets/d0962f80-966f-4c4b-badc-892421cbe83c" />
 
+### Lab Steps to Create STD Cell Layout and Extract SPICE Netlist
 
+* We first create a B Box
+
+<img width="578" height="409" alt="image" src="https://github.com/user-attachments/assets/8413264c-99cc-4753-986e-3965d453f502" />
+
+<img width="694" height="436" alt="image" src="https://github.com/user-attachments/assets/89663bbd-9276-4174-b7a9-b2c3a8c21aa1" />
+
+* We can use the DRC Dropdown to find violations/errors
+
+* Extracting:
+
+<img width="1120" height="428" alt="image" src="https://github.com/user-attachments/assets/c5312e4d-4c75-414d-8f42-f77785a901b8" />
+
+<img width="819" height="186" alt="image" src="https://github.com/user-attachments/assets/f39399f6-4921-4566-9a8b-27bab916e079" />
+
+* As we can see below it created the new file, *sky130_inv.spice* :
+
+<img width="954" height="305" alt="image" src="https://github.com/user-attachments/assets/e1547f8e-2a7d-4826-9bac-fc9ed501ae3f" />
+
+## SKY130 Tech File Labs
+
+### Lab Steps To Create Final SPICE deck using SKY130 tech
+
+<img width="1123" height="516" alt="image" src="https://github.com/user-attachments/assets/bc65e182-09b0-4279-87dc-10f841ae66ec" />
 
