@@ -184,5 +184,10 @@ The image below includes the formula for the same as well:
     * This website has a lot of tutorials and guides on Magic.
 
 ### Lab introduction to Sky130 pdk's and steps to download labs
+* Link for skywater pdk documentation: [https://skywater-pdk.readthedocs.io/en/main/](url)
+* Google's git link: [https://github.com/google/skywater-pdk](url)
 
+Fot downloading the lab files, we use the command: *wget http://opencircuitdesign.com/open_pdks/archive/drc_tests.tgz*
+
+<img width="1916" height="796" alt="image" src="https://github.com/user-attachments/assets/e60ccc2c-95fd-4561-805a-07ec2aad2971" />
 
