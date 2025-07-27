@@ -191,3 +191,9 @@ Fot downloading the lab files, we use the command: *wget http://opencircuitdesig
 
 <img width="1916" height="796" alt="image" src="https://github.com/user-attachments/assets/e60ccc2c-95fd-4561-805a-07ec2aad2971" />
 
+<img width="827" height="672" alt="image" src="https://github.com/user-attachments/assets/f385ec12-4bdd-4ef0-bb7f-7b32b158ca3c" />
+
+* We can use magic only or magic -d XR for betetr graphics- both work fine.
+
+### Lab introduction to Magic and steps to load Sky130 tech-rules
+
