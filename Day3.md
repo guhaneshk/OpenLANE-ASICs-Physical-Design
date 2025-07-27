@@ -175,10 +175,14 @@ The image below includes the formula for the same as well:
 <img width="1900" height="1044" alt="image" src="https://github.com/user-attachments/assets/4b31ca23-8a01-4cb5-b9e5-6b930c5e4ec3" />
 * We changed C3 because its value was too low and it caused spikes in the graph>
 
-### Lab introduction to Magic tool options and DRC rules
-
 <img width="1171" height="779" alt="image" src="https://github.com/user-attachments/assets/1551cb5c-0aa6-4687-b0dc-c5750ef08f3a" />
 
+* The Y Axis is the voltage.
 
+### Lab introduction to Magic tool options and DRC rules
+* Link/Resource on how magic performs DRC: [http://opencircuitdesign.com/magic/](url)
+    * This website has a lot of tutorials and guides on Magic.
+
+### Lab introduction to Sky130 pdk's and steps to download labs
 
 
