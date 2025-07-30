@@ -80,3 +80,32 @@ The pins are specified:
 <img width="719" height="826" alt="image" src="https://github.com/user-attachments/assets/ab265f6d-37c9-40d1-b43b-6810a53b690d" />
 
 ### Introduction to delay tables
+
+<img width="1107" height="508" alt="image" src="https://github.com/user-attachments/assets/49002113-fa10-44ea-8f81-d715189f4048" />
+
+* The image above shows how clock gating works. The clock signal only passes through when the enable pin is set correctly 1 for an AND gate and 0 for an OR gate. This helps reduce unnecessary power use in clock trees by blocking the clock when it's not needed.
+
+<img width="1557" height="645" alt="image" src="https://github.com/user-attachments/assets/8d065f9a-9590-4e4b-9b86-d8167ca2257f" />
+
+* In real circuits, capacitance and load change, which affects the input transition time. That’s why we use delay tables with axes for input transition and output load to more accurately calculate the delay for each cell
+
+### Delay table usage Part 1
+
+* Basically all gates will have their own delay table.
+
+<img width="1337" height="659" alt="image" src="https://github.com/user-attachments/assets/dddf1f73-8325-4127-9377-7ec909935177" />
+
+### Delay table usage Part 2
+
+<img width="1460" height="680" alt="image" src="https://github.com/user-attachments/assets/3e2778c6-59ba-44d1-85c4-7268bcd8ce80" />
+
+If both buffers have the same input and load, there's no skew. Unequal values cause skew hich can basically break timing in big circuits
+
+* Skew = difference in clock arrival time
+* Slew = how fast voltage changes
+* Latency = clock delay
+* CTS builds the clock network to keep everything in sync.
+
+### Lab steps to configure synthesis settings to fix slack and include vsdinv
+
+
