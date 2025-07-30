@@ -143,3 +143,10 @@ As we can see below I found our cell:
 ## Timing analysis with ideal clocks using openSTA
 
 ### Setup timing analysis and introduction to flip-flop setup time
+
+Clock analysis using a single clock.
+
+<img width="1226" height="674" alt="image" src="https://github.com/user-attachments/assets/e12c5561-cbd8-4f60-b880-cb37f6e0a844" />
+
+<img width="1399" height="670" alt="image" src="https://github.com/user-attachments/assets/ae0ebf2b-f2da-47a8-9823-74361c82d300" />
+
