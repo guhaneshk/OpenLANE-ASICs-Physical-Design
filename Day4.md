@@ -2,7 +2,7 @@
 
 ## Timing Modelling Using Delay Tables
 
-### Lab Steps To Convert Grid Info Into Track Infor
+### Lab Steps To Convert Grid Info Into Track Info
 
 <img width="1440" height="266" alt="image" src="https://github.com/user-attachments/assets/2e74bcfa-f87e-4740-9742-8cef659bb1e8" />
 
