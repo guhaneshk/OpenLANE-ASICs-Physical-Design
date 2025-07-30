@@ -48,3 +48,35 @@ Inside/Content of the lef file:
 The pins are specified: 
 
 <img width="777" height="892" alt="image" src="https://github.com/user-attachments/assets/bb2a63a3-d680-4bea-8cd7-d7a113734647" />
+
+### Introduction to timing libs and steps to include new cell in synthesis
+
+<img width="1257" height="444" alt="image" src="https://github.com/user-attachments/assets/f0cdf869-3462-473b-b301-4596a938112f" />
+
+<img width="1378" height="869" alt="image" src="https://github.com/user-attachments/assets/4cf7a690-b3cc-4c04-aefe-d06d293edac0" />
+
+* This directory contains special files that describe how each logic gate behaves in different conditions like hot or cold temperatures, slower or faster chips, and varying voltages. These conditions are called PVT corners. These files help tools figure out timing and power for each gate so the chip can be built correctly during synthesis.
+
+* As we can see below, we succesfully copied the files in the .lib dir to source dir of picorv32a:
+
+<img width="1115" height="214" alt="image" src="https://github.com/user-attachments/assets/cf377fa2-6eaf-4e2b-b165-cf179d23c375" />
+
+* Edit and new add code to the config.tcl file like shown below:
+
+<img width="1196" height="691" alt="image" src="https://github.com/user-attachments/assets/a13ae683-8aa2-454a-8224-3475a826c619" />
+
+* After this, we open up docker to run openlane again, but with a bit of tweaks this time:
+  * After setting up openlane normally- after the package require openlane 0.9 command, add  -tag [number run] -overwrite after the prep -design picorv32a command.
+  * As you can see here:
+
+<img width="1870" height="992" alt="image" src="https://github.com/user-attachments/assets/ed4ccbff-c887-4a18-8f7c-72cbf9e1c467" />
+
+* Then, we type in *set lefs [glob $::env(DESIGN_DIR)/src/*.lef]* and right after that, we type in *add_lefs -src $lefs*.
+
+<img width="785" height="195" alt="image" src="https://github.com/user-attachments/assets/9d9e0004-3128-4e3c-af4e-58075aa10c6d" />
+
+* Then we finally run synthesis:
+
+<img width="719" height="826" alt="image" src="https://github.com/user-attachments/assets/ab265f6d-37c9-40d1-b43b-6810a53b690d" />
+
+### Introduction to delay tables
