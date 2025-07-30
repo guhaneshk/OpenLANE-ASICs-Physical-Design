@@ -140,3 +140,6 @@ As we can see below I found our cell:
 <img width="357" height="403" alt="image" src="https://github.com/user-attachments/assets/5ce1a79c-7ef7-4a31-9ec2-e1b4634b9f3f" />
 
 
+## Timing analysis with ideal clocks using openSTA
+
+### Setup timing analysis and introduction to flip-flop setup time
