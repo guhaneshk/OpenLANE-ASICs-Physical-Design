@@ -108,4 +108,35 @@ If both buffers have the same input and load, there's no skew. Unequal values ca
 
 ### Lab steps to configure synthesis settings to fix slack and include vsdinv
 
+* I did not have any violations and hence I did not perform any of it.
+* But to fix violations, we have to look at the current value of SYNTH_STRATEGY, SYNTH_BUFFERING, SYNTH_SIZING, and SYNTH_DRIVING_CELL.
+
+Now, we run floorplan,
+
+<img width="1790" height="484" alt="image" src="https://github.com/user-attachments/assets/206bb500-b2f1-4905-9be0-8579c17c97c0" />
+
+As we can see, my floorplan failed
+
+To fix this I ran these commands one by one, 
+* init_floorplan
+* place_io
+* global_placement_or
+* detailed_placement
+* tap_decap_or
+* detailed_placement
+
+As we can see the placement file has been created:
+
+<img width="1304" height="330" alt="image" src="https://github.com/user-attachments/assets/20b09be3-541a-4b75-9610-94aaf4ecea39" />
+
+After running magic using the command, *magic -T /home/vsduser/Desktop/work/tools/openlane_working_dir/pdks/sky130A/libs.tech/magic/sky130A.tech lef read ../../tmp/merged.lef def read picorv32a.placement.def*  ,We can see the placement:
+
+<img width="1841" height="620" alt="image" src="https://github.com/user-attachments/assets/eaf1120b-77e8-4a00-9fe2-fd3d17ddf440" />
+
+<img width="1626" height="791" alt="image" src="https://github.com/user-attachments/assets/d61b9c3d-f717-4e60-9d1b-f66d0834a8bf" />
+
+As we can see below I found our cell:
+
+<img width="357" height="403" alt="image" src="https://github.com/user-attachments/assets/5ce1a79c-7ef7-4a31-9ec2-e1b4634b9f3f" />
+
 
