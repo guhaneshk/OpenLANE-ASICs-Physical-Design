@@ -170,3 +170,19 @@ Clock analysis using a single clock.
 
 ### lab steps to optimize synthesis to reduce setup violations
 
+* Since it concluded with a violation- we have to fix it.
+* If fanout is high, go back to OpenLane and set:
+*set ::env(SYNTH_MAX_FANOUT) 4*
+Then re run synthesis. This helps limit the number of loads per net, reducing delay and improving slack.
+
+<img width="380" height="79" alt="image" src="https://github.com/user-attachments/assets/9bc0bf94-65ba-4502-b3ab-e11c4221b653" />
+
+* With this we can get an expected value for the slack.
+
+### Lab steps to do basic timing ECO
+
+* To reduce slack violations further, we can upsize cells with high fanout, this gives stronger drivers to handle large capacitive loads which cuts delay. Since we can't tweak the load directly, increasing cell size helps.
+* even the tns are improved.
+
+## Clock tree routing and buffering using H-Tree algorithm
+
