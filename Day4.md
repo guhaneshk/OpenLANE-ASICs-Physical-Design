@@ -150,3 +150,23 @@ Clock analysis using a single clock.
 
 <img width="1399" height="670" alt="image" src="https://github.com/user-attachments/assets/ae0ebf2b-f2da-47a8-9823-74361c82d300" />
 
+### Introduction to clock jitter and uncertainty
+
+<img width="1194" height="676" alt="image" src="https://github.com/user-attachments/assets/104176a1-417b-4af1-b8e3-f2a3dc78b7cd" />
+
+* we model jitter mainly for uncertainity.
+
+* Detailed circuit:
+
+<img width="1418" height="673" alt="image" src="https://github.com/user-attachments/assets/1bb8caa3-a8db-4204-836f-7269b900bbd8" />
+
+### Lab steps to configure open STA for post synth timing analysis
+
+* we first create a pre_sta.conf file and a my_base.sdc file.
+
+<img width="1130" height="364" alt="image" src="https://github.com/user-attachments/assets/b2acca57-388f-4300-8a7b-53fde3ec803e" />
+
+* We finally run sta pre_sta.conf and check its timing
+
+### lab steps to optimize synthesis to reduce setup violations
+
