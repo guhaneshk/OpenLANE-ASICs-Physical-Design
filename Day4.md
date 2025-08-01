@@ -184,7 +184,9 @@ Then re run synthesis. This helps limit the number of loads per net, reducing de
 * To reduce slack violations further, we can upsize cells with high fanout, this gives stronger drivers to handle large capacitive loads which cuts delay. Since we can't tweak the load directly, increasing cell size helps.
 * even the tns are improved.
 
-## Clock tree routing and buffering using H-Tree algorithm
+## Clock tree synthesis TritonCTS and signal integrity
+
+### Clock tree routing and buffering using H-Tree algorithm
 
 <img width="1555" height="667" alt="image" src="https://github.com/user-attachments/assets/6c82b924-f76e-4ee5-a14b-d0ad43ec69a2" />
 
@@ -194,9 +196,72 @@ Then re run synthesis. This helps limit the number of loads per net, reducing de
 <img width="1023" height="604" alt="image" src="https://github.com/user-attachments/assets/b2b95fcb-d3d2-46e7-95a6-0b1f249b0cd5" />
 
 
-*A clock tree basically distributes the clock signal to all flip flops with minimal skew which means minimal difference in arrival times. Skew is caused by unequal wire lengths, delays, or routing. To reduce this, H-tree routing is used, which places the clock source at the center and evenly splits it to keep delays balanced. Buffers are added to preserve signal quality. Unlike data buffers, clock buffers maintain equal rise and fall times for consistent timing across the circuit.
+* A clock tree basically distributes the clock signal to all flip flops with minimal skew which means minimal difference in arrival times. Skew is caused by unequal wire lengths, delays, or routing. To reduce this, H-tree routing is used, which places the clock source at the center and evenly splits it to keep delays balanced. Buffers are added to preserve signal quality. Unlike data buffers, clock buffers maintain equal rise and fall times for consistent timing across the circuit.
 
 * As you can see, we added a bunch of buffers here:
 
 <img width="1000" height="612" alt="image" src="https://github.com/user-attachments/assets/49f8eb62-9db5-492d-8627-e1866c98a1eb" />
 
+### Crosstalk and clock net shielding
+
+Clock nets are basically highly sensitive and need shielding to avoid crosstalk when signals on nearby wires interfere due to high coupling capacitance. This interference causes two main problems, which are:
+* Glitch: Voltage dips or spikes that corrupts data
+* Delta delay: Extra delay when both wires switch at once, increasing the clock skew
+
+To avoid this, shielding wires tied to power/ground are placed on either side of critical nets like clock lines, isolating them from interference and improving the overall timing.
+
+<img width="902" height="647" alt="image" src="https://github.com/user-attachments/assets/a14101cb-e144-4a2b-aa86-d0b8d285498c" />
+
+
+<img width="664" height="459" alt="image" src="https://github.com/user-attachments/assets/a32fb075-4352-418e-9c52-119677c79f70" />
+
+
+<img width="1359" height="655" alt="image" src="https://github.com/user-attachments/assets/db6d21f0-5558-4de8-8af8-405046be4c7a" />
+
+### Lab steps to run CTS using TritonCTS
+
+* We have to change/switch the cells above 1 which are cauing slack violations, this causes the time to lessen overall.
+
+<img width="626" height="93" alt="image" src="https://github.com/user-attachments/assets/4c108756-3ceb-4366-93cd-e2d73f153825" />
+
+* After this we need to update our results since we did some chnges in the cells.
+* after finishing write_verilog, we run floorplan finally.
+
+* Finally we run CTS, with the command *run_cts*
+
+<img width="1130" height="157" alt="image" src="https://github.com/user-attachments/assets/5d5d87e4-d38b-4888-8c5f-e5be6e3e1384" />
+
+### Lab steps to verify CTS runs
+
+* The TCL Commands can be found in */Desktop/work/tools/openlane_working_dir/openlane/scripts/tcl_commands* 
+
+Whats actually happening/content inside the *cts.tcl* file
+* This is the file that acutally controls the CTS Logic
+* This file includes various variables like *CTS_CLK_BUFFER_LIST*, which are buffers used to branch the clock tree; *CTS_ROOT_BUFFER*, which is the  biggest buffer and *CTS_MAX_CAP* which is the capacitance limit at the output to avoid delays.
+
+## Timing Analysis with real clocks Using OpenSTA
+
+### Setup timing analysis using real clocks
+
+* At this point, the clock has been successfully built.
+
+<img width="1038" height="660" alt="image" src="https://github.com/user-attachments/assets/c6aec952-1076-49c5-8220-3e4ee5c96c82" />
+
+
+<img width="1412" height="663" alt="image" src="https://github.com/user-attachments/assets/03a755d1-5540-45f4-bcc7-3ebc817bbe22" />
+
+* Slack = Data required time – Data arrival time, we want slack to be zero or positive for timing to meet
+* Hold time checks that data is held stable long enough after the clock edge and violations happen if buffers cause signals to arrive too early
+
+### Hold timing analysis using real clocks
+
+<img width="1291" height="660" alt="image" src="https://github.com/user-attachments/assets/f2f41fcf-76ba-45d4-8231-3829ef8e4826" />
+
+
+<img width="1480" height="689" alt="image" src="https://github.com/user-attachments/assets/a9266fee-6aaf-4018-9e61-cbca3bfe8753" />
+
+* Hold analysis uses the same clock edge for both launch and capture, the formula is lack = data arrival time – data required time, and it should be ≥ 0
+
+* Hold violations happen when the path is too fast, due to low combinational delay, clock skew (delta1/delta2), or basically small hold time
+
+### Lab steps to analyze timing with real clocks using OpenSTA
