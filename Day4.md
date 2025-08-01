@@ -186,3 +186,17 @@ Then re run synthesis. This helps limit the number of loads per net, reducing de
 
 ## Clock tree routing and buffering using H-Tree algorithm
 
+<img width="1555" height="667" alt="image" src="https://github.com/user-attachments/assets/6c82b924-f76e-4ee5-a14b-d0ad43ec69a2" />
+
+* t2-t1 = skew
+<img width="1357" height="617" alt="image" src="https://github.com/user-attachments/assets/f85e30da-d4f7-464d-a083-b3b518bdecda" />
+
+<img width="1023" height="604" alt="image" src="https://github.com/user-attachments/assets/b2b95fcb-d3d2-46e7-95a6-0b1f249b0cd5" />
+
+
+*A clock tree basically distributes the clock signal to all flip flops with minimal skew which means minimal difference in arrival times. Skew is caused by unequal wire lengths, delays, or routing. To reduce this, H-tree routing is used, which places the clock source at the center and evenly splits it to keep delays balanced. Buffers are added to preserve signal quality. Unlike data buffers, clock buffers maintain equal rise and fall times for consistent timing across the circuit.
+
+* As you can see, we added a bunch of buffers here:
+
+<img width="1000" height="612" alt="image" src="https://github.com/user-attachments/assets/49f8eb62-9db5-492d-8627-e1866c98a1eb" />
+
