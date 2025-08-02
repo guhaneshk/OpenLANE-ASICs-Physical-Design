@@ -265,3 +265,56 @@ Whats actually happening/content inside the *cts.tcl* file
 * Hold violations happen when the path is too fast, due to low combinational delay, clock skew (delta1/delta2), or basically small hold time
 
 ### Lab steps to analyze timing with real clocks using OpenSTA
+
+* We start off with opening openroad and then we create the db file using the read_lef command.
+* We read led with: *read_lef /openLANE_flow/designs/picorv32a/runs/17-07_00-07/tmp/merged.lef*
+We then make a db file: * write_db pico_cts.db*
+* We read def with: *read_def /openLANE_flow/designs/picorv32a/runs/17-07_00-07/results/cts/picorv32a.cts.def*
+<img width="1156" height="102" alt="image" src="https://github.com/user-attachments/assets/9db379de-fbef-463e-9f89-88d07d832fa7" />
+
+First, it loads the timing libraries which are the slowest (LIB_SLOWEST) and fastest (LIB_FASTEST) for the worst/best case delay analysis.
+* Then we read in the .sdc file, Verilog netlist, and database, This basically sets the timing environment
+* We use this command, *set_propagated_clock [all_clocks]* to enable actual clock delar
+We finally run *report_checks* to view or hold the slack. Also touting later affects hold slack due to added RC delays
+
+### Lab steps to execute OpenSTA with right timing libraries and CTS assignment
+
+* TritonCTS only works with typical corner timing, so using min.max results isn’t really valid here
+To fix that, we close OpenROAD, reopen it, and reload everything — but this time using the typical timing library.
+We re-link the design, bring in the clock and SDC file again, and then run a fresh timing report.
+* To read the sdc we use link_design picorv32a
+For the report, we typr in *report_checks -path_delay min_max -fields {slew trans net cap input_pin} -format full_clock_expanded -digits 4*
+
+If setup slack still looks off, we can tweak the clock buffer list (like removing the first one) to help TritonCTS optimize better.
+
+But as you can that the hold slack is met:
+
+<img width="382" height="40" alt="image" src="https://github.com/user-attachments/assets/98813316-dcab-477f-81d6-345853e0b0f9" />
+
+Likewise, even the setup slack was met.
+
+### Lab steps to observe impact of bigger CTS buffers on setup and hold timing
+
+We get some errors because the current DEF file is from after CTS
+* To fix this, we load the DEF from placement instead 
+
+<img width="1162" height="51" alt="image" src="https://github.com/user-attachments/assets/a96610cd-64ab-4cb7-acb9-c3c24ac19c04" />
+
+After switching to the placement DEF, we re run CTS and it completes successfully.
+
+After this, back in OpenROAD, we save a new .db file (like : pico_cts1.db) just like before
+
+Then, we re read the Verilog, LIB_SYNTH_COMPLETE, link the design, read the SDC, set propagated clocks, and finally run timing checks
+
+We observe the new hold(which was violated again sadly)
+
+We can also check clock skew using : *report_clock_skew*
+
+To fiunally re-add the buffer that was removed, we ened to exit OpenROAD and run this command: *set ::env(CTS_CLK_BUFFER_LIST) [linsert $::env(CTS_CLK_BUFFER_LIST) 0 sky130_fd_sc_hd__clkbuf_1]*
+
+<img width="1155" height="73" alt="image" src="https://github.com/user-attachments/assets/f742769c-5ba5-4cef-8cea-5cb842260cae" />
+
+
+
+
+
