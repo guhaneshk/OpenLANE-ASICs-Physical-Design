@@ -315,6 +315,6 @@ To fiunally re-add the buffer that was removed, we ened to exit OpenROAD and run
 <img width="1155" height="73" alt="image" src="https://github.com/user-attachments/assets/f742769c-5ba5-4cef-8cea-5cb842260cae" />
 
 
-
+—---------------------------------------**END OF DAY 4**\--------------------------------------------------
 
 
