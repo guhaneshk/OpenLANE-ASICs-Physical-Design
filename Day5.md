@@ -39,6 +39,7 @@ There is 3 typical rules:
 
 * Wire spacing is the minimun spacing between wires.
 
+
 2 New rule designs to be checked:
 
 <img width="476" height="374" alt="image" src="https://github.com/user-attachments/assets/2a9716b1-1b90-4043-8fc3-019fd45433b8" />
@@ -47,3 +48,33 @@ There is 3 typical rules:
 
 ## Power distribution network and routing
 
+### Lab steps to build power distribution network
+
+To start off, just run docker a usual but this time, we put prep -design picorv32a -tag (date) to get back.
+
+* We then type  echo $::env(CURRENT_DEF) /openLANE_flow/designs/picorv32a/runs/results/cts/picorv32a.cts.def
+* then we generate the power distribution network using the command, *gen_pdn*.
+
+Then it should be successfull:
+
+<img width="815" height="37" alt="image" src="https://github.com/user-attachments/assets/0e9cb6cd-4d69-4144-8b28-20749c853b48" />
+
+### Lab Steps From Power Straps To STD Cell Power
+
+<img width="780" height="511" alt="image" src="https://github.com/user-attachments/assets/5a9e3382-d052-418f-92ec-c74e76010000" />
+
+The diagram above shows power (red) and ground (blue) boxes arranged in rings with corner pads, vertical stripes connected by vias, and standard cells placed in rows, where power straps feed the rails and macros
+
+Our next step is routing, and our current def has been updated.
+
+### Basics of global and detail routing and configure TritonRoute
+
+* We first run routing with this command: *run_routing* . After routing, **tritonroute** is used.
+
+Routing is divided into two main steps:
+* **Global Route:** It is also known as fast route, It is the step where the chip layout is split into tiles or rectangles to sketch rough paths for signals.
+* **Detail route:** follows the plan closely, using algorithms and the route guide to find the best, most rule ompliant connections between components.
+
+<img width="1225" height="635" alt="image" src="https://github.com/user-attachments/assets/86eff64f-6590-4662-998a-c419618d9b97" />
+
+  
