@@ -77,4 +77,58 @@ Routing is divided into two main steps:
 
 <img width="1225" height="635" alt="image" src="https://github.com/user-attachments/assets/86eff64f-6590-4662-998a-c419618d9b97" />
 
-  
+## TritonRoute Features
+
+### TritonRoute feature 1 - Honors pre-processed route guides
+
+Some features:
+
+<img width="995" height="472" alt="image" src="https://github.com/user-attachments/assets/0c2b68b9-e8db-4893-9854-eef944b6ba27" />
+
+As mentioned in the above image, mainly Tritonroute performs the intial detail route and it honores pre-processed route guides from the global route (attempts as much as possible).
+
+<img width="946" height="621" alt="image" src="https://github.com/user-attachments/assets/a49f13c1-eedb-4384-9e00-61e1b04f68b8" />
+
+
+<img width="959" height="315" alt="image" src="https://github.com/user-attachments/assets/7dc20ae4-ae05-4016-a092-78afdad207d3" />
+
+### TritonRoute Feature 2 & 3 - Inter-guide connectivity and intra- & inter-layer routing
+
+<img width="958" height="447" alt="image" src="https://github.com/user-attachments/assets/006ba4f7-61b5-4bfc-8953-09e54d622bca" />
+
+Routing begins in the vertical direction on M1 (Metal 1), using dashed panel lines as guides. It starts with intra-layer routing in even-indexed panels first, then moves to odd-indexed ones. This keeps routing organized within each layer. Once a layer is completed, routing progresses upward to higher layers, ensuring a clear and structured flow of connections across the chip.
+
+<img width="991" height="513" alt="image" src="https://github.com/user-attachments/assets/218212ca-4e33-47fa-b71b-8ee789ecd90f" />
+
+### TritonRoute method to handle connectivity
+
+<img width="1103" height="334" alt="image" src="https://github.com/user-attachments/assets/a43896bd-7db7-4df7-8141-be9d67d6647b" />
+
+
+<img width="1136" height="529" alt="image" src="https://github.com/user-attachments/assets/70fd379f-f319-4873-bcfd-2ef13042248c" />
+
+**In Summary:** In routing, the blue (M1) lines follow vertical tracks (dashed lines), where each dash represents an access point candidate (APC) possible spots to connect. To connect a red pin (on M2), the router selects the best or optimal access point (AP) and transitions through layers using via. For multi-layer routing, we should properly allign APs across layers and minimize interference, considering both layer preferences and via placements to get good conectivity.
+
+### Routing topology algorithm and final files list post-route
+
+<img width="842" height="516" alt="image" src="https://github.com/user-attachments/assets/204fe101-2dff-4296-80c3-1d0401f2a6fe" />
+
+This is the algorithm shows above.
+
+* For each APC, we need to find the cost associated with it.
+
+We finally finished routing using *run_routing* , and that too without any violations.
+
+After this we open and run the DEF File in magic (The def file will be inside the routing dir inside results with the file name of *picorv32.def*)
+If we open it in magic, we can finally see it:
+
+<img width="586" height="573" alt="image" src="https://github.com/user-attachments/assets/3547d245-8098-41d6-920d-050a9807b5fc" />
+
+Also we can run the SPEF extractor, but Im pretty sure it is automatic for us.
+
+As you can see there are new files in the results-synthesis dir:
+
+<img width="1580" height="49" alt="image" src="https://github.com/user-attachments/assets/54ec0603-007c-4de0-aa21-1014c04075ec" />
+
+
+
